@@ -28,4 +28,4 @@ A program I participated in as a coach was the [WIT Learning Program](https://wi
 
 After completing my bachelors, I worked at [Bang the Table](https://www.bangthetable.com/), a startup focussed on building a product that focusses on community engagement. Bang the Table would later be [acquired](https://www.globenewswire.com/news-release/2021/06/17/2249019/0/en/Granicus-to-Acquire-SaaS-GovTech-Leaders-Bang-the-Table-and-OpenCities.html) by [Granicus](https://granicus.com/). My role primiarly involved a lot of Rails and a little bit of dabbling with Kubernetes. 
 
-In fall of 2021, I will be be a part of the [Erasmus-Mundus LCT](https://lct-master.org/contents_2014/overview.php) program, completing the first year at Charles University, Prague and the second year at Saarland University, Germany. Wish me luck !
+<!-- In fall of 2021, I will be be a part of the [Erasmus-Mundus LCT](https://lct-master.org/contents_2014/overview.php) program, completing the first year at Charles University, Prague and the second year at Saarland University, Germany. Wish me luck ! -->
