@@ -1,9 +1,8 @@
 title: Amrita H Nair
 email: amritahnair@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Amrita Nair's blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: Amrita Nair's blog
+baseurl: ""
+url: "https://amrtanair.github.io/"
 twitter_username: amrtanair
 github_username:  amrtanair
 
@@ -13,3 +12,8 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  shortname: amrtanair-github-io

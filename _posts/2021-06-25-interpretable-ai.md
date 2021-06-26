@@ -2,7 +2,8 @@
 layout: post
 title:  "About Interpretable Machine Learning"
 date:   2021-06-25 00:13:24 +0530
-categories: jekyll update
+categories: blog ml
+comments: true
 ---
 
 A learned model is an implicit, dynamically varying relationship that learns from the data provided to it, and is constantly updated as new information is added as input. Explaining what they predict, otherwise known as interpretable machine learning, is a relatively small subset of research when compared to the focus on achieving better performance metrics for these models [^1]. 
