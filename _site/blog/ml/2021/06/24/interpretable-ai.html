@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>About Interpretable Machine Learning | Amrita H Nair</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="About Interpretable Machine Learning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Interpretable machine learning, as specified by Carvalho, Diogo V et al (2019) in “Machine learning interpretability: A survey on methods and metrics” enables a user to verify, interpret and understand the reasoning of a system." />
+<meta property="og:description" content="Interpretable machine learning, as specified by Carvalho, Diogo V et al (2019) in “Machine learning interpretability: A survey on methods and metrics” enables a user to verify, interpret and understand the reasoning of a system." />
+<link rel="canonical" href="http://localhost:4000/blog/ml/2021/06/24/interpretable-ai.html" />
+<meta property="og:url" content="http://localhost:4000/blog/ml/2021/06/24/interpretable-ai.html" />
+<meta property="og:site_name" content="Amrita H Nair" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-24T20:43:24+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="About Interpretable Machine Learning" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/blog/ml/2021/06/24/interpretable-ai.html","headline":"About Interpretable Machine Learning","dateModified":"2021-06-24T20:43:24+02:00","datePublished":"2021-06-24T20:43:24+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/ml/2021/06/24/interpretable-ai.html"},"description":"Interpretable machine learning, as specified by Carvalho, Diogo V et al (2019) in “Machine learning interpretability: A survey on methods and metrics” enables a user to verify, interpret and understand the reasoning of a system.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Amrita H Nair" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Amrita H Nair</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/background.html">Background</a><a class="page-link" href="/blog.html">Blog</a><a class="page-link" href="/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">About Interpretable Machine Learning</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-06-24T20:43:24+02:00" itemprop="datePublished">Jun 24, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Interpretable machine learning, as specified by Carvalho, Diogo V et al (2019) in “Machine learning interpretability: A survey on methods and metrics” enables a user to verify, interpret and understand the reasoning of a system.</p>
+
+<!--more-->
+
+<p>Another succinct definition describes the properties of such a model.</p>
+
+<blockquote>
+  <p>An interpretable model is one where a human can contemplate it at once (simulatability), based on a full understanding of the algorithm (algorithmic transparency) where each input is by itself interpretable (decomposability) <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">1</a></sup>.</p>
+</blockquote>
+
+<p>A learned model is an implicit, dynamically varying relationship that learns from the data provided to it, and is constantly updated as new information is added as input. Explaining what they predict, otherwise known as interpretable machine learning, is a relatively small subset of research when compared to the focus on achieving better performance metrics for these models <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">2</a></sup>.</p>
+
+<!--more-->
+
+<p>Interest in the area of machine learning interpretability has seen resurgence <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> since many real-world problems in different domains are being tackled using machine learning and artificial intelligence. Sensitive issues like recidivism prediction, detection of money-laundering in financial systems, and healthcare are being addressed using increasingly complex models.</p>
+
+<blockquote>
+  <p>In delicate scenarios, being certain of the path the model takes to arrive at a decision is necessary to rule out algorithmic bias due to training data.</p>
+</blockquote>
+
+<p>The need for interpretability is also due to incompleteness in the problem statement as elaborated by Doshi-Velez and Kim(2017)<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>. Some situations such as movie recommender systems do not require an explanation due to the simple fact that the output does not have a significant effect on a human, while a recidivism prediction system should justify its conclusion to rule out any bias, say, on racial grounds. The problem statement here would not only involve predictions, but also an explanation of the reason behind such a prediction due to its impact on human life.</p>
+
+<p>Building on this, the “European Union Regulations on Algorithmic Decision Making and A Right to Explanation” by Bryce Goodman and Seth Flaxman, dictates a “right to explanation”. Hence, interpretable models seem to be the need of the hour.</p>
+
+<blockquote>
+  <p>Considering the widespread penetration of machine learning in day-to-day life, a natural question arises: Can you trust the model?</p>
+</blockquote>
+
+<p>This can be perceived on two levels, trusting a model and trusting an individual prediction. One prerequisite to trust, whether towards a model or a prediction is understanding/knowledge of its behaviour, which is where techniques such as LIME (Local Interpretable Model-Agnostic Explanation) come in handy <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>. As elaborated in the cited paper, LIME attempts to explain a prediction by presenting a simple model in the neighbourhood of the instance in question.</p>
+
+<p>An interesting example provided in this paper takes the case of a text classifier that uses SVM’s on a subset of the 20 group dataset to differentiate ‘Atheism’ from ‘Christianity’. The accuracy rate was very high, but the LIME technique reported that the decision was made for random reasons like the occurrence of words that have no connection with either classification. It is tempting to use a model with such a high accuracy until we discover the reason behind the model’s decisions. Hence, high accuracy on the test set does not always assure that a model will perform well.</p>
+
+<blockquote>
+  <p>Techniques such as LIME can be used together with these models to assess the prediction and encourage trust among users.</p>
+</blockquote>
+
+<p>Model audits are another way to ensure trust since audits give a sense of the reliability of the model. One such example is the Resampling Uncertainty Estimation (RUE), an algorithm that addresses reliability by creating “an ensemble of predictions” and “estimates the amount that a prediction would change if the model had been fit on different training data” <sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>.</p>
+
+<blockquote>
+  <p>RUE is one among many algorithms that seek to audit models, a prominent feature is the fact that it audits after learning and provides an uncertainty score for each prediction.</p>
+</blockquote>
+
+<p>So far, this essay has discussed trust based on an understanding of the inner workings of algorithms and on the basis of a framework that would measure reliability through uncertainty scores calculated during the testing phase. At this point, taking a step back to compare the decision-making skills of a model against a human’s thought process can also be treated as a component that goes into trusting it. Is the user of the model comfortable in giving up control of the situation? Would a human truly perform better in cases that involve racial and gender bias? In a situation like this, a model may come to a conclusion similar to the one that a human would arrive at, simply because the dataset may reflect a human’s prejudice.</p>
+
+<blockquote>
+  <p>Another aspect of trust would mean that we can rely on a model’s decisions if a human could make the same error.<sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">1</a></sup></p>
+</blockquote>
+
+<p>We can conclude this discussion with an important point. Trusting a model depends largely on its use case. When it is a low-stakes situation such as a product recommendation system, an incorrect prediction would at best waste a few minutes of a user’s time. In higher impact situations, it seems very risky to have blind faith in the model due to issues such as dataset shift <sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>.</p>
+
+<p>Again, while model interpretability techniques do provide an insight into how models work, they also fulfil human curiosity. Since the beginning of time, humans have tried to deepen their understanding of the universe and it is natural to have questions about the black-box implementation of some models. Understanding the reasoning behind a decision will also lead to greater societal acceptance towards machine learning and artificial intelligence.</p>
+
+<p>All in all, any advance in explainable machine learning models would lead to the capabilities of AI being leveraged in every field, as people would encourage the use of transparent systems. Further, this would accelerate the research in the field of data science as a whole.</p>
+
+<h3 id="references">References</h3>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:2" role="doc-endnote">
+      <p>Lipton, Z. C. (2018). The Mythos of Model Interpretability: In machine learning, the concept of interpretability is both important and slippery. Queue, 16(3), 31-57. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:1" role="doc-endnote">
+      <p>Carvalho, D. V., Pereira, E. M., &amp; Cardoso, J. S. (2019). Machine learning interpretability: A survey on methods and metrics. Electronics, 8(8), 832. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Linardatos, P., Papastefanopoulos, V., &amp; Kotsiantis, S. (2021). Explainable AI: A Review of Machine Learning Interpretability Methods. Entropy, 23(1), 18. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Doshi-Velez, F., &amp; Kim, B. (2017). Towards a rigorous science of interpretable machine learning. arXiv preprint arXiv:1702.08608. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Ribeiro, M. T., Singh, S., &amp; Guestrin, C. (2016, August). “ Why should i trust you?” Explaining the predictions of any classifier. In Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining (pp. 1135-1144). <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Schulam, P., &amp; Saria, S. (2019, April). Can you trust this prediction? Auditing pointwise reliability after learning. In The 22nd International Conference on Artificial Intelligence and Statistics (pp. 1022-1031). PMLR. <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Moreno-Torres, J. G., Raeder, T., Alaiz-Rodríguez, R., Chawla, N. V., &amp; Herrera, F. (2012). A unifying view on dataset shift in classification. Pattern recognition, 45(1), 521-530. <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/blog/ml/2021/06/24/interpretable-ai.html" hidden></a>
+</article>
+
+
+
+      </div>
+    </main><footer>
+</footer>
+</body>
+
+</html>
+

@@ -1,0 +1,25 @@
+title: Amrita H Nair
+email: amritahnair@gmail.com
+description: Amrita Nair's blog
+baseurl: ""
+url: "https://amrtanair.github.io/"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-pdf-embed
+
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: amrtanair-github-io
+  shortname: 
+
+excerpt_separator: <!--more-->
+
+twitter: amrtanair
+github: amrtanair
+google_analytics: G-6MR4GD71HG

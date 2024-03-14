@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Barebones Search Engine Implementation | Amrita H Nair</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Barebones Search Engine Implementation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blog documents the process of implementing a search engine that takes a query term as input and ranks relevant documents in the corpus." />
+<meta property="og:description" content="This blog documents the process of implementing a search engine that takes a query term as input and ranks relevant documents in the corpus." />
+<link rel="canonical" href="http://localhost:4000/projects/2020/08/29/search-engine.html" />
+<meta property="og:url" content="http://localhost:4000/projects/2020/08/29/search-engine.html" />
+<meta property="og:site_name" content="Amrita H Nair" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-29T20:43:24+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Barebones Search Engine Implementation" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/projects/2020/08/29/search-engine.html","headline":"Barebones Search Engine Implementation","dateModified":"2020-08-29T20:43:24+02:00","datePublished":"2020-08-29T20:43:24+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/2020/08/29/search-engine.html"},"description":"This blog documents the process of implementing a search engine that takes a query term as input and ranks relevant documents in the corpus.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Amrita H Nair" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Amrita H Nair</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/background.html">Background</a><a class="page-link" href="/blog.html">Blog</a><a class="page-link" href="/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Barebones Search Engine Implementation</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-08-29T20:43:24+02:00" itemprop="datePublished">Aug 29, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>This blog documents the process of implementing a search engine that takes a query term as input and ranks relevant documents in the corpus.</p>
+
+<!--more-->
+
+<p>The corpus, in this case is a collection of random documents, that is, wiki’s of a tv show’s prominent characters, a movie franchise, a country, a social media company and a type of fish.</p>
+
+<p>Code at : <a href="https://github.com/amrtanair/search-engine">amrtanair/search-engine</a></p>
+
+<h3 id="breaking-down-the-problem-and-the-approach">Breaking down the problem and the approach</h3>
+
+<p>The first step was to create the inverted index(a dictionary that stores the mapping of a term to its occurrences in a document/corpus) for a single document. This involved using the requests library to fetch the contents of a webpage and the BeautifulSoup library to parse and store the text content on the webpage. The resulting textfile was then stored as tokens(a list that contains all words in the document(minus the stopwords) in lowercase format) and a document list. Later, the inverted index was created using the python dictionary data type.</p>
+
+<p>The second step was doing the same on the corpus, that is, creating an inverted index that included the position of every relevant term in every document. The way to do this was to create a <code class="language-plaintext highlighter-rouge">mother_inverted_index</code> that would be a collection of all inverted indexes such that the value for every key in the dictionary is a list of lists, something like this: 
+Let’s say the word “harry”, appears in documents 1, 3, but not 2. The record in the hashmap would be as follows:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'harry' =&gt; [[1, [45, 67, 54]], [2, [2, 5, 4]]]]
+</code></pre></div></div>
+<p>Every time the inverted index for a doc was created, it was ‘merged’ into the mother inverted index by looping through every term in the newly created one: adding the term to the larger inverted index if it doesn’t exist and if it does exist, add it to the existing key/value pair in the <code class="language-plaintext highlighter-rouge">mother_inverted_index</code>.</p>
+
+<p>The next step was the create a basic search engine, sans the ranking. A string was taken as an input and each word was compared with the inverted index.</p>
+
+<h3 id="ranking">Ranking</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">tf-idf</a> was used to rank the relevant documents. It describes how ‘important’ a term is in a given document. There are different versions of implementing this algorithm. Tf-idf here will be calculated using the method <a href="https://github.com/scikit-learn/scikit-learn/blob/0fb307bf3/sklearn/feature_extraction/text.py#L1322">sci-kit</a> uses in the hyperlinked file.</p>
+
+<p>After the tf-idf was calculated, the vectors for each document was also normalised using the l2-norm normalization technique. Normalisation was performed because we would be comparing each document’s vector with a query vector. This query vector is also k-dimensional and normalised.</p>
+
+<p>The similarity between the query vector and each relevant document’s vector was done using the cosine similarity method which calculates the angle between two vectors in a multi-dimensional space. Smaller the angle, the higher the similarity. 
+The value returned is a list of lists of all document URLs with the similarity index in such a format:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[url1, cosine1], [url2, cosine2]]
+</code></pre></div></div>
+<h3 id="work-ahead">Work ahead</h3>
+
+<p>There are some points where this implementation can be improved:</p>
+
+<ol>
+  <li>Stemming the tokens in the corpus and the query. Different forms of a word can be searched for it would make the resulting inverted index cleaner.</li>
+  <li>A cleaner way of generating tfidf. There is room for improvement, using a different data structure or routine would make it more space/time efficient.</li>
+  <li>Dividing the modules into classes better and using OOP methodology to structure this.</li>
+  <li>Using a much more diverse dataset.</li>
+</ol>
+
+<blockquote>
+  <p>Note: I am still learning python and I have a long long way to go. I will be updating this blog and the Github repository as I get better at writing pythonic code. This is still a WIP :)</p>
+</blockquote>
+
+  </div><a class="u-url" href="/projects/2020/08/29/search-engine.html" hidden></a>
+</article>
+
+
+
+      </div>
+    </main><footer>
+</footer>
+</body>
+
+</html>
+
