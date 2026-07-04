@@ -125,8 +125,9 @@ blockquote {
     position: absolute;
     inset: -30px;
     background: var(--bg) center / cover no-repeat;
-    filter: blur(26px) brightness(0.52) saturate(1.5);
-    transform: scale(1.15);
+    filter: blur(22px) brightness(0.52) saturate(1.5);
+    transform: scale(1.15) translateZ(0);
+    will-change: transform;
   }
 
   img {
@@ -168,6 +169,10 @@ blockquote {
 }
 
 .carousel-wrapper:hover .carousel-btn { opacity: 1; }
+
+.carousel-container.is-sliding .carousel-wrapper {
+  animation-play-state: paused;
+}
 
 @media (hover: none) {
   .carousel-btn { opacity: 0.75; }

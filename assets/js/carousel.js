@@ -13,11 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function goTo(index) {
       current = ((index % total) + total) % total;
+      container.classList.add('is-sliding');
       track.style.transform = 'translateX(-' + (current * 100) + '%)';
       dots.forEach(function (d, i) {
         d.classList.toggle('active', i === current);
       });
     }
+
+    track.addEventListener('transitionend', function () {
+      container.classList.remove('is-sliding');
+    });
 
     if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); });
     if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); });
