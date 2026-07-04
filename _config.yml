@@ -17,6 +17,7 @@ plugins:
   - jekyll-feed
   - jekyll-archives
   - jekyll-pdf-embed
+  - jemoji
 
 jekyll-archives:
   enabled:
