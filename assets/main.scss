@@ -23,3 +23,30 @@
     text-decoration: none;
   }
 }
+
+.date-banner {
+  text-align: center;
+  position: relative;
+  margin: 2em 0 1.5em;
+  font-size: 0.8em;
+  color: #aaa;
+  letter-spacing: 0.05em;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e8e8e8;
+    z-index: 0;
+  }
+
+  span {
+    position: relative;
+    background: white;
+    padding: 0 14px;
+    z-index: 1;
+  }
+}

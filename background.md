@@ -22,11 +22,15 @@ Around this time, I was awarded the WeTech Qualcomm Global Scholarship. This pro
 Through the four years of my undergraduate, I was also involved in programs that help guide women into tech. One of those initiatives was by the [Rethink](https://wiki.rethinkfoundation.in/Rethink_Wiki:About) initiative.
 A program I participated in as a coach was the [WIT Learning Program](https://wit.rethinkfoundation.in/).
 
+<div class="date-banner"><span>2019 – 2021</span></div>
+
 After completing a bachelors in engineering, I worked at [Bang the Table](https://www.bangthetable.com/), a startup focussed on building a product that encourages community engagement. Bang the Table would later be [acquired](https://www.globenewswire.com/news-release/2021/06/17/2249019/0/en/Granicus-to-Acquire-SaaS-GovTech-Leaders-Bang-the-Table-and-OpenCities.html) by [Granicus](https://granicus.com/). My role primarily involved a lot of Rails.
  
+<div class="date-banner"><span>2021 – 2023</span></div>
+
 In fall of 2021, I will be a part of the [Erasmus-Mundus LCT](https://lct-master.org/) program as an EMJMD scholar, completing the first year at Charles University, Prague and the second year at Saarland University, Germany. Wish me luck !
 
-*Update: July 4, 2026*
+<div class="date-banner"><span>July 4, 2026</span></div>
 
 Apparently, luck was on my side :smiley: — the program went well, and the thesis was awarded an [excellent grade at Charles University](https://dspace.cuni.cz/handle/20.500.11956/193429).
 
