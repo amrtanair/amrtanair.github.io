@@ -7,6 +7,12 @@ url: "https://amrtanair.github.io/"
 # Build settings
 markdown: kramdown
 theme: minima
+
+header_pages:
+  - background.md
+  - blog.md
+  - tags.md
+  - index.md
 plugins:
   - jekyll-feed
   - jekyll-archives
