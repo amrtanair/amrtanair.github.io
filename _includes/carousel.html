@@ -5,7 +5,7 @@
     <div class="carousel-inner">
       <div class="carousel-track">
         {% for img in imgs %}
-        <div class="carousel-slide">
+        <div class="carousel-slide" style="--bg: url('{{ img }}')">
           <img src="{{ img }}" alt="Photo {{ forloop.index }}" loading="lazy">
         </div>
         {% endfor %}
