@@ -1,2 +1,13 @@
-<footer>
+<footer class="site-footer">
+  <div class="wrapper footer-content">
+    <span>{{ site.title }}</span>
+    <span>
+      {%- if site.github -%}
+        <a href="https://github.com/{{ site.github }}">GitHub</a>
+      {%- endif -%}
+      {%- if site.email -%}
+        &nbsp;·&nbsp;<a href="mailto:{{ site.email }}">Email</a>
+      {%- endif -%}
+    </span>
+  </div>
 </footer>

@@ -32,28 +32,62 @@ $brand-color: #C026D3;
 }
 
 .date-banner {
-  text-align: center;
-  position: relative;
-  margin: 2em 0 1.5em;
-  font-size: 0.8em;
-  color: #aaa;
-  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 2.5em 0 1.5em;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
+    flex: 1;
     height: 1px;
-    background: #e8e8e8;
-    z-index: 0;
+    background: rgba(192, 38, 211, 0.2);
   }
 
   span {
-    position: relative;
-    background: white;
-    padding: 0 14px;
-    z-index: 1;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.8em;
+    color: $brand-color;
+    opacity: 0.6;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+}
+
+blockquote {
+  border-left: 3px solid $brand-color;
+  color: #666;
+  font-style: italic;
+}
+
+.post-read-time {
+  font-size: 0.85em;
+  color: #aaa;
+  margin-left: 6px;
+
+  &::before {
+    content: '· ';
+  }
+}
+
+.site-footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 20px 0;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    color: #aaa;
+
+    a {
+      color: #aaa;
+      &:hover {
+        color: $brand-color;
+      }
+    }
   }
 }
