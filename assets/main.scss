@@ -25,28 +25,25 @@
 }
 
 .date-banner {
-  text-align: center;
-  position: relative;
-  margin: 2em 0 1.5em;
-  font-size: 0.8em;
-  color: #aaa;
-  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 2.5em 0 1.5em;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
+    flex: 1;
     height: 1px;
-    background: #e8e8e8;
-    z-index: 0;
+    background: #ddd;
   }
 
   span {
-    position: relative;
-    background: white;
-    padding: 0 14px;
-    z-index: 1;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.8em;
+    color: #aaa;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
   }
 }
