@@ -9,7 +9,16 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-archives
   - jekyll-pdf-embed
+
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
 
 # Disqus Comments
 disqus:

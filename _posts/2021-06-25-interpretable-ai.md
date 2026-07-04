@@ -3,6 +3,7 @@ layout: post
 title:  "About Interpretable Machine Learning"
 date:   2021-06-25 00:13:24 +0530
 categories: blog ml
+tags: [ml]
 comments: false
 ---
 Interpretable machine learning, as specified by Carvalho, Diogo V et al (2019) in “Machine learning interpretability: A survey on methods and metrics” enables a user to verify, interpret and understand the reasoning of a system. 

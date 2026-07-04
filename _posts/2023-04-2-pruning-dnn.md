@@ -3,6 +3,7 @@ layout: post
 title:  "On Pruning Large Language Model's"
 date:   2023-04-2 00:13:24 +0530
 categories: blog ml
+tags: [ml, nlp]
 comments: false
 ---
 

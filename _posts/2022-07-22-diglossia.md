@@ -3,6 +3,7 @@ layout: post
 title:  "A look at Diglossia"
 date:   2022-07-22 00:13:24 +0200
 categories: blog ml
+tags: [linguistics, nlp]
 comments: false
 ---
 The term Diglossia, derived from the Greek word, *diglōssos*(two tongues) was brought into popular usage in the English language by Charles Ferguson who wrote an influential paper of the same name (Ferguson, 1959). 

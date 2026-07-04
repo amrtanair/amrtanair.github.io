@@ -3,6 +3,7 @@ layout: post
 title:  "Barebones Search Engine Implementation"
 date:   2020-08-30 00:13:24 +0530
 categories: projects
+tags: [projects]
 comments: false
 ---
 

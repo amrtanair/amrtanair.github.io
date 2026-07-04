@@ -6,6 +6,7 @@ gem "webrick"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
+  gem "jekyll-archives"
   gem "jekyll-pdf-embed"
   gem "kramdown-parser-gfm"
 end
