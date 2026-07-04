@@ -1,0 +1,27 @@
+{% assign imgs = include.images | split: "|" %}
+{% if imgs.size > 0 %}
+<div class="carousel-container" data-carousel tabindex="0">
+  <div class="carousel-wrapper">
+    <div class="carousel-inner">
+      <div class="carousel-track">
+        {% for img in imgs %}
+        <div class="carousel-slide">
+          <img src="{{ img }}" alt="Photo {{ forloop.index }}" loading="lazy">
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% if imgs.size > 1 %}
+    <button class="carousel-btn carousel-btn--prev" aria-label="Previous">&#8249;</button>
+    <button class="carousel-btn carousel-btn--next" aria-label="Next">&#8250;</button>
+    {% endif %}
+  </div>
+  {% if imgs.size > 1 %}
+  <div class="carousel-dots">
+    {% for img in imgs %}
+    <span class="carousel-dot"></span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endif %}
