@@ -27,11 +27,6 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
 
-collections:
-  private_posts:
-    output: true
-    permalink: /private/:title/
-
 excerpt_separator: <!--more-->
 
 twitter: amrtanair
