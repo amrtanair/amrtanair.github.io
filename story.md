@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Background"
+title:  "Story"
 ---
 
 I started working on Ruby and Ruby on Rails in the first year of engineering and by the end of second year, I was selected for the [Rails Girls Summer of Code](https://railsgirlssummerofcode.org/), a program which accepts 20 teams all over the world (2 students per team) each year and provides them with an open-source project to work on. It is a global fellowship program for women and non-binary coders.
@@ -34,7 +34,7 @@ In fall of 2021, I will be a part of the [Erasmus-Mundus LCT](https://lct-master
 
 Apparently, luck was on my side :smiley: — the program went well, and the thesis was awarded an [excellent grade at Charles University](https://dspace.cuni.cz/handle/20.500.11956/193429).
 
-I wrote my [master's thesis](https://dspace.cuni.cz/handle/20.500.11956/193429) on unsupervised Open Information Extraction with LLMs ([PDF](/pdfs/amrita_thesis.pdf)), supervised by [Pavel Pecina](https://ufal.mff.cuni.cz/pavel-pecina/students). at Charles University and Günter Neumann at Saarland. The starting point was DeepEx, which generates candidate triples from the attention matrix of a pretrained language model and then ranks them with a contrastive model trained on millions of Wikipedia-derived sentence-triple pairs. The generation step produces too many candidate triples; the ranker is what accounts for the system's performance. My question was whether the ranker really needs that much data. Could one trained far more simply, on far less data, do the same job?
+I wrote my [master's thesis](https://dspace.cuni.cz/handle/20.500.11956/193429) on unsupervised Open Information Extraction with LLMs ([PDF](/pdfs/amrita_thesis.pdf)), supervised by [Pavel Pecina](https://ufal.mff.cuni.cz/pavel-pecina/students) at Charles University and Günter Neumann at Saarland. The starting point was DeepEx, which generates candidate triples from the attention matrix of a pretrained language model and then ranks them with a contrastive model trained on millions of Wikipedia-derived sentence-triple pairs. The generation step produces too many candidate triples; the ranker is what accounts for the system's performance. My question was whether the ranker really needs that much data. Could one trained far more simply, on far less data, do the same job?
 
 The intuition I tested: English is an SVO language, so if you take a subject-predicate-object triple and simply join it, you get a clause. If the triple is a good extraction, that clause should read as a sentence a native speaker would accept. So instead of contrastive ranking, I ranked triples by linguistic acceptability, using BERT fine-tuned on acceptability corpora like CoLA and MegaAcceptability, and probability-based acceptability measures from the sentence acceptability literature to correct for confounds like sentence length and lexical frequency. The substitution held up. With orders of magnitude less ranking data, the system matched or beat DeepEx on most standard OpenIE benchmarks. The ablation studies threw up some interesting results of their own, you can check them out [here](/pdfs/amrita_thesis.pdf)
 

@@ -9,7 +9,7 @@ markdown: kramdown
 theme: minima
 
 header_pages:
-  - background.md
+  - story.md
   - blog.md
   - tags.md
   - index.md
