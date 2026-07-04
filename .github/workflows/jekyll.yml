@@ -32,6 +32,15 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Encrypt private pages
+        run: |
+          if [ -d "_site/private" ] && [ -n "$PAGES_PASSWORD" ]; then
+            find _site/private -name "*.html" | while IFS= read -r file; do
+              npx staticrypt "$file" --password "$PAGES_PASSWORD" --directory "$(dirname "$file")"
+            done
+          fi
+        env:
+          PAGES_PASSWORD: ${{ secrets.PAGES_PASSWORD }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
